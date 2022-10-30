@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flask Socketio</title>
+  <!--        flask-socketio-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--        Jquery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+</head>
+
+<body>
+<h3>Join Room</h3>
+<form id="joinRoom" method="POST" action="#">
+  <label>Room Number</label>
+  <input type="text" id="roomNum" required>
+  <input type="submit" id="submitRoomNum">
+</form>
+<button id="leave_room">Leave</button>
+<ul id="chatContent"></ul>
+<form id="SubmitForm" method="POST" action="#">
+  <textarea placeholder="在此输入。。。" name="msg" id="chatMsg" required></textarea>
+  <button type="submit">发送</button>
+</form>
+</body>
+</html>
